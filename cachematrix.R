@@ -18,6 +18,7 @@ cacheSolve <- function(x, ...) {
       print(theanswer) 
     }
   else{
+      ## In case there is nothing
       print("No cashed answer available")
     }
    
