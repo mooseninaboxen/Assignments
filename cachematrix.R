@@ -1,15 +1,25 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Programming Assignment 2 for Coursera R Programming
+## Funtions calculate the inverse of a provided matrix, and stores the inverse in the cashe
 
-## Write a short comment describing this function
+## This function accepts a matrix as a variable and calculates the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 
+  theanswer <<- solve(x) %% x
 }
 
-
-## Write a short comment describing this function
+## This function calls the value calculated in makeCasheMatrix
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  ##Check for null
+  if(!is.null(theanswer)){
+      ## Return a matrix that is the inverse of 'x'
+      return(theanswer) 
+      print(theanswer) 
+    }
+  else{
+      print("No cashed answer available")
+    }
+   
 }
+  
